@@ -1,5 +1,6 @@
 # Project Title
 Telecom Customer Churn Prediction using Machine Learning Algorithms
+https://www.kaggle.com/code/bigibraeh/customer-churn-prediction
 
 # Description 
 Customer churn is a critical concern for telecom industry, where customers can easily switch providers. Predicting churn is vital for telecom business strategy. This project aims to evaluate the effectiveness of various machine learning algorithms in predicting customer churn.
