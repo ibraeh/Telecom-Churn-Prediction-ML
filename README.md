@@ -2,52 +2,47 @@
 Telecom Customer Churn Prediction using Machine Learning Algorithms
 
 # Description 
-Customer churn is a significant challenge in the telecom industry, where customers can easily switch providers. Predicting churn allows companies to proactively target at-risk customers with retention campaigns, minimizing revenue loss. This project aims to evaluate the effectiveness of various machine learning algorithms in predicting customer churn using a dataset obtained from Kaggle
+Customer churn is a critical concern for telecom industry, where customers can easily switch providers. Predicting churn is vital for telecom business strategy. This project aims to evaluate the effectiveness of various machine learning algorithms in predicting customer churn.
 
 This project investigates the following questions:
 
-What factors contribute to customer churn in the telecom industry?
-How accurately can different machine learning algorithms predict customer churn based on these factors?
+* What factors contribute to customer churn in the telecom industry?
+* How accurately can different machine learning algorithms predict customer churn based on these factors?
 
 # Methodology
 ## Data Acquisition
-The data for this project was obtained from the [Telecom Customer Churn Prediction](https://www.kaggle.com/datasets/shilongzhuang/telecom-customer-churn-by-maven-analytics) dataset. This dataset includes information on various customer demographics, service plans, and usage patterns, along with a label indicating whether a customer churned (cancelled service) or not.
+The dataset was obtained from Kaggle using the link [Telecom Customer Churn Prediction](https://www.kaggle.com/datasets/shilongzhuang/telecom-customer-churn-by-maven-analytics). The dataset contained customer details such as demographics, location, tenure, subscription services, customer status (joined, stayed, or churned), and many more.
 
 ## Data Exploration & Preprocessing
-* Exploratory Data Analysis (EDA): We performed an initial exploration of the data to understand its characteristics, identify potential missing values, and analyze the distribution of key features.
-* Data Cleaning: We addressed missing values through techniques like mean/median imputation or removal depending on the feature's nature. Categorical features were encoded using appropriate methods (e.g., one-hot encoding).
-* Feature Engineering (Optional): If you created any new features based on existing ones, briefly describe the process here.
+* Exploratory Data Analysis (EDA): Initial exploration was performed on the data to understand its characteristics, identify missing values, and analyze key features distribution.
+* Data Cleaning: Missing values were removed due to the features being categorical in nature. Techniques like imputation were not used since this worked best for numerical values. The categorical features were also encoded using appropriate methods such as label encoding and one-hot encoding. The features were scaled using standardization and the presence of outliers were mitigated using this approach. Again, the imbalance nature of the dataset was handled through the application SMOTE and Random Under Sampler.
+
 
 ## Machine Learning Models
-We experimented with a variety of machine learning algorithms to predict customer churn. Here's a breakdown of the chosen models and the rationale behind them:
+A mix of linear, non-linear and ensemble algorithms were used for this multi-class classification problem. Below is the breakdown:
 
-* Logistic Regression: A widely used linear model suitable for classification problems. It provides interpretability of the model's predictions, allowing us to understand which factors most influence churn.
-* Random Forest: An ensemble learning method known for its robustness to overfitting and handling complex relationships between features.
-* Gradient Boosting (e.g., XGBoost): Another powerful ensemble method that can capture non-linear relationships and potentially outperform simpler models in churn prediction.
-(Optional): Briefly mention any hyperparameter tuning techniques used to optimize the performance of each model.
+* Linear algorithms: Logistic regression and Linear Discriminant Analysis.
+* Non-linear algorithms: K-Nearest Neighbor, Decision Tree Classifier, Naïve Bayes, and Multi-Layer Perceptron. 
+* Ensemble algorithms: Extreme Gradient Boosting and  Random Forest.
 
 # Evaluation
-To assess the effectiveness of the chosen machine learning models in predicting customer churn, we employed several evaluation metrics:
+To assess the effectiveness of the chosen models in predicting customer churn, the following evaluation metrics were employed: Accuracy, Precision, Recall, and AUC-ROC Curve.
 
-* Accuracy: Measures the overall proportion of correctly classified churn and non-churn customers.
-* Precision: Represents the proportion of predicted churn cases that were actually churned (avoiding false positives).
-* Recall: Captures the proportion of actual churn cases that were correctly identified by the model (avoiding false negatives).
-* AUC-ROC Curve: A visualization tool that helps compare the performance of different models. It plots the True Positive Rate (TPR) against the False Positive Rate (FPR) at various classification thresholds. A model with a higher AUC-ROC value generally performs better.
-We evaluated each model using these metrics on a held-out test set (a portion of the data not used for training) to ensure unbiased assessment. The results will be presented in tables or charts within this section.
+Each model was evaluated using these metrics on a GridSearchCV to determine the best and optimize model. The results were presented in a table.
 
-Key Findings:
+**Key Findings**:
 
-Based on the evaluation results, we will identify the most effective machine learning algorithms for predicting customer churn in this dataset. The analysis will highlight:
+Based on the GridSearchCV, the most effective model for predicting customer churn was determined. The analysis also highlighted on:
 
-Which models achieved the highest accuracy, precision, recall, and AUC-ROC score.
-Insights into the trade-offs between different metrics (e.g., a model with high accuracy might have lower precision).
+* Which model achieved the best score, accuracy, precision, recall, and AUC-ROC score.
+* Insights into the trade-offs between different metrics.
 
 # Key Takeaways
-This section summarizes the key learnings and insights gained from your customer churn prediction project. Here's a breakdown you can use:
 
-Effectiveness of Machine Learning Algorithms: Briefly summarize which algorithms performed best in predicting customer churn based on your evaluation metrics. Highlight any surprising findings or insights into their strengths and weaknesses for this specific task.
-Impactful Features (Optional): If your analysis revealed specific features in the data that had a strong influence on churn prediction, mention them here. This could be helpful for understanding customer behavior and informing future retention strategies.
-Limitations & Considerations: Acknowledge any limitations of the project, such as the dataset size or chosen evaluation metrics. Discuss potential areas for improvement in future work (e.g., exploring additional algorithms, feature engineering techniques).
-Overall Conclusion:
+* Effectiveness of Machine Learning Algorithms: Ensemble algorithms like XGBoost were effective in predicting customer churn with an accuracy of more than 90%. It was also consistently higher across all the classes in terms of precision, recall, and F1 score showing that it was a robust and scalable model. Compared to the baseline model with an accuracy of 70%, XGBoost improved in more than 25%.  
+* Impactful Features: The preferred feature selection technique out of the five was Random Forest Feature Importance. This was due to its effectiveness, interpretability, and robustness in dealing with complexity in data. Which was valuable in understanding customer behavior in the telecom industry.  
+* Limitations & Considerations: SVM was not used due to its computational and time complexity. It will be worth exploring and applying deep learning in future works. Some challenges that could also be addressed in future endeavors include limitations in the size and nature of the dataset, complexity of the problem, computational resource availability, and interpretability of the model.
 
-Conclude by reiterating the project's value. Briefly state how your analysis contributes to the understanding of customer churn prediction in the telecom industry using machine learning.
+**Conclusion**: Overall, XGBoost was effective in predicting customer churn and ideal strategy in enhancing customer retention in the telecom industry. The project also underscored the importance of selecting the appropriate feature selection technique and models tailored to a task. 
+
+
