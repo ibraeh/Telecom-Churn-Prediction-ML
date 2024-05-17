@@ -16,10 +16,11 @@ The dataset was obtained from Kaggle using the link [Telecom Customer Churn Pred
 ## Data Exploration & Preprocessing
 * Exploratory Data Analysis (EDA): Initial exploration was performed on the data to understand its characteristics, identify missing values, and analyze key feature distributions.
 * Data Cleaning: Missing values were removed due to the features being categorical. Techniques like imputation were not used since this works best for numerical values. The categorical features were also encoded using appropriate methods such as label encoding and one-hot encoding. The features were scaled using standardization, and outliers were mitigated using this approach. Again, due to the imbalance in the dataset, oversampling and undersampling were performed using SMOTE and Random Under Sampler, respectively.
+* Feature Selection: Five different feature selection techniques were used including Variance threshold, ANOVA with select K best, Recursive Forward Elimination, Random Forest Feature Importance, and Principal Component Analysis (PCA).
 
 
 ## Machine Learning Models
-A mix of linear, non-linear and ensemble algorithms were used for this multi-class classification problem. Below is the breakdown:
+A mix of linear, non-linear, and ensemble algorithms were used for this multi-class classification problem. Below is the breakdown:
 
 **Linear algorithms:** 
 * Logistic regression: Used as the baseline model, interpretable, and efficient.  
@@ -51,8 +52,10 @@ Based on the GridSearchCV, the most effective model for predicting customer chur
 
 * **Effectiveness of Machine Learning Algorithms:** Ensemble algorithms like XGBoost were effective in predicting customer churn with an accuracy of more than 90%. It was also consistently higher across all the classes in terms of precision, recall, and F1 score showing that it was a robust and scalable model. Compared to the baseline model with an accuracy of 70%, XGBoost improved by more than 20%.  
 * **Impactful Features:** The preferred feature selection technique out of the five was Random Forest Feature Importance. This was due to its effectiveness, interpretability, and robustness in dealing with complexity in data, which was valuable in understanding customer behaviour in the telecom industry.  
-* **Limitations & Considerations:** SVM was not used due to its computational and time complexity. It will be worth exploring and applying deep learning especially recurrent neural networks in future works. Some challenges that could also be addressed in future endeavours include limitations in the size and nature of the dataset, complexity of the problem, computational resource availability, and interpretability of the model.
+* **Limitations & Considerations:** SVM was not used due to its computational and time complexity. It will be worth exploring and applying deep learning especially recurrent neural networks in future works. Some challenges that could also be addressed in future endeavors include limitations in the size and nature of the dataset, complexity of the problem, computational resource availability, and interpretability of the model.
 
 **Conclusion**: Overall, XGBoost was effective in predicting customer churn, and using SHAP (SHapley Additive exPlanations) to explain influential features provided valuable insights in enhancing customer retention strategies in the telecom industry. The project also underscored the importance of selecting the appropriate feature selection technique and models tailored to the task. 
+
+[View Notebook](https://www.kaggle.com/code/bigibraeh/customer-churn-prediction)
 
 
