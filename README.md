@@ -14,9 +14,9 @@ This project investigates the following questions:
 The dataset was obtained from Kaggle using the link [Telecom Customer Churn Prediction](https://www.kaggle.com/datasets/shilongzhuang/telecom-customer-churn-by-maven-analytics). The dataset contains customer details such as demographics, location, tenure, subscription services, customer status (joined, stayed, or churned), and more.
 
 ## Data Exploration & Preprocessing
-* Exploratory Data Analysis (EDA): Initial exploration was performed on the data to understand its characteristics, identify missing values, and analyze key feature distributions.
-* Data Cleaning: Missing values were removed due to the features being categorical. Techniques like imputation were not used since this works best for numerical values. The categorical features were also encoded using appropriate methods such as label encoding and one-hot encoding. The features were scaled using standardization, and outliers were mitigated using this approach. Again, due to the imbalance in the dataset, oversampling and undersampling were performed using SMOTE and Random Under Sampler, respectively.
-* Feature Selection: Five different feature selection techniques were used including Variance threshold, ANOVA with select K best, Recursive Forward Elimination, Random Forest Feature Importance, and Principal Component Analysis (PCA).
+* **Exploratory Data Analysis (EDA):** Initial exploration was performed on the data to understand its characteristics, identify missing values, and analyze key feature distributions.
+* **Data Cleaning:** Missing values were removed due to the features being categorical. Techniques like imputation were not used since this works best for numerical values. The categorical features were also encoded using appropriate methods such as label encoding and one-hot encoding. The features were scaled using standardization, and outliers were mitigated using this approach. Again, due to the imbalance in the dataset, oversampling and undersampling were performed using SMOTE and Random Under Sampler, respectively.
+* **Feature Selection:** Five different feature selection techniques were used including Variance threshold, ANOVA with select K best, Recursive Forward Elimination, Random Forest Feature Importance, and Principal Component Analysis (PCA).
 
 
 ## Machine Learning Models
@@ -61,7 +61,7 @@ Based on the GridSearchCV, the most effective model for predicting customer chur
 
 [View Notebook](https://www.kaggle.com/code/bigibraeh/customer-churn-prediction)
 
-
+* Screenshots
 ![model_scores](https://github.com/ibraeh/Telecom-Churn-Prediction-ML/assets/29314702/213e83e8-19b4-45c5-a91a-fb31abace5f7)
 ![SHAP summary plot](https://github.com/ibraeh/Telecom-Churn-Prediction-ML/assets/29314702/cc07f4c7-dfc4-4138-a309-2682585b98a5)
 ![SHAP feature importances](https://github.com/ibraeh/Telecom-Churn-Prediction-ML/assets/29314702/fb686a26-53a5-4029-b184-8d9dbe8d0b0f)
