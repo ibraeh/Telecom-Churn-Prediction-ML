@@ -53,7 +53,7 @@ Based on the GridSearchCV, the most effective model for predicting customer chur
 
 # Key Takeaways
 
-* **Effectiveness of Machine Learning Algorithms:** Ensemble algorithms like XGBoost were effective in predicting customer churn with an accuracy of more than 90%. It was also consistently higher across all the classes in terms of precision, recall, and F1 score showing that it was a robust and scalable model. Compared to the baseline model with an accuracy of 70%, XGBoost improved by more than 20%.  
+* **Effectiveness of Machine Learning Algorithms:** Ensemble algorithms like XGBoost were effective in predicting customer churn with an accuracy of 90%. It was also consistently higher across all the classes in terms of precision, recall, and F1 score showing that it was a robust and scalable model. Compared to the baseline model with an accuracy of 70%, XGBoost improved by more than 20%.  
 * **Impactful Features:** The preferred feature selection technique out of the five was Random Forest Feature Importance. This was due to its effectiveness, interpretability, and robustness in dealing with complexity in data, which was valuable in understanding customer behaviour in the telecom industry.  
 * **Limitations & Considerations:** SVM was not used due to its computational and time complexity. It will be worth exploring and applying deep learning especially recurrent neural networks in future works. Some challenges that could also be addressed in future endeavors include limitations in the size and nature of the dataset, complexity of the problem, computational resource availability, and interpretability of the model.
 
@@ -62,3 +62,6 @@ Based on the GridSearchCV, the most effective model for predicting customer chur
 [View Notebook](https://www.kaggle.com/code/bigibraeh/customer-churn-prediction)
 
 
+![model_scores](https://github.com/ibraeh/Telecom-Churn-Prediction-ML/assets/29314702/213e83e8-19b4-45c5-a91a-fb31abace5f7)
+![SHAP summary plot](https://github.com/ibraeh/Telecom-Churn-Prediction-ML/assets/29314702/cc07f4c7-dfc4-4138-a309-2682585b98a5)
+![SHAP feature importances](https://github.com/ibraeh/Telecom-Churn-Prediction-ML/assets/29314702/fb686a26-53a5-4029-b184-8d9dbe8d0b0f)
