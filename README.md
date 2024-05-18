@@ -37,7 +37,7 @@ A mix of linear, non-linear, and ensemble algorithms were used for this multi-cl
 * Random Forest: Handles non-linearity through bagging, reduces overfitting, interpretable with feature importance.
 
 ## Tools
-Jupyter Notebook, Python, Pandas, Numpy, Matplotlib, Seaborn, Scikit-learn, SHAP.
+Jupyter Notebook, Python, Pandas, Numpy, Matplotlib, Seaborn, Scikit-learn, and SHAP.
 
 # Evaluation
 To assess the effectiveness of the chosen models in predicting customer churn, the following evaluation metrics were employed: Accuracy, Precision, Recall, and AUC-ROC Curve.
