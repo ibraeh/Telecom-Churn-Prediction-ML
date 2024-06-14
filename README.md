@@ -1,63 +1,62 @@
-# Project Title
-[Telecom Customer Churn Prediction using Machine Learning Algorithms](https://www.kaggle.com/code/bigibraeh/customer-churn-prediction)
+### Project Outline
 
-# Description 
-Customer churn is a critical concern for the telecom industry, where customers can easily switch providers. Predicting churn is vital for telecom business strategy. This project aims to evaluate the effectiveness of various machine learning algorithms in predicting customer churn.
+**Title**: 
+[Telecom Customer Churn Prediction using Machine Learning Algorithms](https://www.kaggle.com/code/bigibraeh/customer-churn-prediction)  
+**Duration**: 2 Months  
+**Team Size**: 1
 
-This project investigates the following questions:
+**Objective**: 
+To develop a model for predicting customer churn in the telecom industry, aiming to provide insights for proactive customer retention strategies.
 
-* What factors contribute to customer churn in the telecom industry?
-* How accurately can different machine learning algorithms predict customer churn based on these factors?
+**Scope**: 
+Predicting customer churn is crucial for telecom companies to minimize loss of revenue and maintain customer satisfaction. This project evaluated multiple machine learning algorithms to identify the best approach for accurate churn prediction.
 
-# Methodology
-## Data Acquisition
-The dataset was obtained from Kaggle using the link [Telecom Customer Churn Prediction](https://www.kaggle.com/datasets/shilongzhuang/telecom-customer-churn-by-maven-analytics). The dataset contains customer details such as demographics, location, tenure, subscription services, customer status (joined, stayed, or churned), and more.
+**Role and Responsibilities**:  
+- **Role**: Machine Learning Engineer
+- **Responsibilities**:
+  - Collected and preprocessed data from Kaggle, including cleaning and encoding categorical features.
+  - Conducted Exploratory Data Analysis (EDA) to understand data distribution and characteristics.
+  - Applied feature selection techniques such as Variance Threshold, ANOVA, Recursive Forward Elimination, Random Forest Feature Importance, and PCA.
+  - Developed models using various algorithms, including Logistic Regression, Linear Discriminant Analysis, Naive Bayes, Decision Trees Classifier, K-Nearest Neighbor, Multi-Layer Perceptron, Random Forest, and XGBoost.
+  - Evaluated model performance using metrics such as accuracy, precision, recall, and AUC-ROC.
+  - Fine-tuned hyperparameters using GridSearchCV to optimize model performance.
+  - Used SHAP (SHapley Additive exPlanations) for model interpretation and to identify key features influencing churn.
 
-## Data Exploration & Preprocessing
-* **Exploratory Data Analysis (EDA):** Initial exploration was performed on the data to understand its characteristics, identify missing values, and analyze key feature distributions.
-* **Data Cleaning:** Missing values were removed due to the features being categorical. Techniques like imputation were not used since this works best for numerical values. The categorical features were also encoded using appropriate methods such as label encoding and one-hot encoding. The features were scaled using standardization, and outliers were mitigated using this approach. Again, due to the imbalance in the dataset, oversampling and undersampling were performed using SMOTE and Random Under Sampler, respectively.
-* **Feature Selection:** Five different feature selection techniques were used including Variance threshold, ANOVA with select K best, Recursive Forward Elimination, Random Forest Feature Importance, and Principal Component Analysis (PCA).
+**Methods and Tools**:  
+- **Data Sources**:  [Telecom Customer Churn Prediction](https://www.kaggle.com/datasets/shilongzhuang/telecom-customer-churn-by-maven-analytics) dataset with customer details including demographics, subscription services, and churn status.
+- **Algorithms**: Logistic Regression, Linear Discriminant Analysis, K-Nearest Neighbor, Decision Tree Classifier, Naïve Bayes, Multi-Layer Perceptron, XGBoost, Random Forest.
+- **Tools and Libraries**: Jupyter Notebook, Python, Pandas, Numpy, Matplotlib, Seaborn, Scikit-learn, SHAP.
 
+**Challenges and Solutions**:  
+- **Challenges**:
+  - Imbalanced data with fewer churn cases compared to non-churn cases.
+  - High-dimensional categorical features requiring effective encoding and selection.
+- **Solutions**:
+  - Applied SMOTE for oversampling to balance the dataset.
+  - Used label encoding and one-hot encoding for categorical features.
+  - Employed feature selection techniques to identify the most relevant features and reduce dimensionality.
 
-## Machine Learning Models
-A mix of linear, non-linear, and ensemble algorithms were used for this multi-class classification problem. Below is the breakdown:
+**Results and Impact**:  
+- **Key Achievements**:
+  - Developed a predictive model with 90% accuracy in predicting customer churn. 
+  - The XGBoost model outperformed and made improvement from the baseline logistic regression model with more than 25%.
+  - XGBoost also performed well in terms of precision, recall, and F1 score across all classes.
+- **Metrics**: 
+  - XGBoost achieved F1 score of 0.92 and accuracy of 0.92
+  - Precision and Recall were as follows 0.92 and 0.92. Consistently high across all models, with XGBoost leading.
+  - AUC-ROC score of XGBoost in the multi-class were 0.96, 1.00, and 0.98 for Churned, Joined and Stayed respectively.
+- **Impact**: 
+  - The predictive model provided telecom companies with actionable insights for customer retention, reducing churn rates and improving customer satisfaction.
 
-**Linear algorithms:** 
-* Logistic regression: Used as the baseline model, interpretable, and efficient.  
-* Linear Discriminant Analysis: Handles high dimensionality, good for separating classes if the data is normally distributed.
+**Conclusion**:  
+- **Lessons Learned**: 
+  - Ensemble algorithms, particularly XGBoost, are highly effective for churn prediction.
+  - Feature selection using techniques like Random Forest Feature Importance is crucial for model interpretability and performance.
+- **Future Work**: 
+  - Explore advanced deep learning techniques such as recurrent neural networks.
+  - Address challenges related to computational complexity and model interpretability.
+
  
-**Non-linear algorithms:** 
-* K-Nearest Neighbor: Non-parametric, efficient in capturing local patterns.
-*  Decision Tree Classifier: Handles mixed features, interpretable, good for feature importance.
-* Naïve Bayes: Efficient for large datasets, works well with sparse features (if feature independence assumption holds).
-* Multi-Layer Perceptron: Explores non-linear relationships, and learns complex patterns.
-  
-**Ensemble algorithms:** 
-* Extreme Gradient Boosting (XGBoost): Robust, handles complex data, effective in classification tasks, provides feature importance.
-* Random Forest: Handles non-linearity through bagging, reduces overfitting, interpretable with feature importance.
-
-## Tools
-Jupyter Notebook, Python, Pandas, Numpy, Matplotlib, Seaborn, Scikit-learn, and SHAP.
-
-# Evaluation
-To assess the effectiveness of the chosen models in predicting customer churn, the following evaluation metrics were employed: Accuracy, Precision, Recall, and AUC-ROC Curve.
-
-Each model was evaluated using these metrics with GridSearchCV and hyperparameter tuning to determine the best and most optimized model. The results were presented in a table.
-
-**Key Findings**:
-
-Based on the GridSearchCV, the most effective model for predicting customer churn was determined. The analysis also highlighted:
-
-* Which model achieved the best score, accuracy, precision, recall, and AUC-ROC score?
-* Insights into the trade-offs between different metrics.
-
-# Key Takeaways
-
-* **Effectiveness of Machine Learning Algorithms:** Ensemble algorithms like XGBoost were effective in predicting customer churn with an accuracy of 90%. It was also consistently higher across all the classes in terms of precision, recall, and F1 score showing that it was a robust and scalable model. Compared to the baseline model with an accuracy of 70%, XGBoost improved by more than 20%.  
-* **Impactful Features:** The preferred feature selection technique out of the five was Random Forest Feature Importance. This was due to its effectiveness, interpretability, and robustness in dealing with complexity in data, which was valuable in understanding customer behaviour in the telecom industry.  
-* **Limitations & Considerations:** SVM was not used due to its computational and time complexity. It will be worth exploring and applying deep learning especially recurrent neural networks in future works. Some challenges that could also be addressed in future endeavors include limitations in the size and nature of the dataset, complexity of the problem, computational resource availability, and interpretability of the model.
-
-**Conclusion**: Overall, XGBoost was effective in predicting customer churn, and using SHAP (SHapley Additive exPlanations) to explain influential features provided valuable insights in enhancing customer retention strategies in the telecom industry. The project also underscored the importance of selecting the appropriate feature selection technique and models tailored to the task. 
 
 [View Notebook](https://www.kaggle.com/code/bigibraeh/customer-churn-prediction)
 * Screenshots
